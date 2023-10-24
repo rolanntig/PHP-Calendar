@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.monthContainer form {
+  display: flex;
+  justify-content: space-evenly;
+}
+table {
+  border-collapse: collapse;
+}
+
+table tr {
+  border: black solid 1px;
+  width: 10vw;
+  height: 10vh;
+}
