@@ -49,8 +49,7 @@
                     $weekNumber = (date('N', strtotime($currentDate)) == 1) ? date('W', strtotime($currentDate)) : '';
                     $dayNumber = date('z', strtotime($currentDate)) + 1;
                     $class = (date('N', strtotime($currentDate)) == 7) ? 'sunday' : '';
-                    $dayOfYear = date('z', strtotime($currentDate));
-                    $namn = isset($namnsdagar[$dayOfYear]) ? implode(', ', $namnsdagar[$dayOfYear]) : 'Ingen namnsdag';
+                    $namn = isset($namnsdagar[$dayNumber]) ? implode(', ', $namnsdagar[$dayNumber]) : 'Ingen namnsdag';
 
                     $string .= "<tr><td>{$date} (Dag {$dayNumber})</td><td class='$class'>$dayName</td><td>$namn</td><td class='week-number'>$weekNumber</td></tr>";
                     $currentDate = date('Y-m-d', strtotime($currentDate . ' +1 day'));
